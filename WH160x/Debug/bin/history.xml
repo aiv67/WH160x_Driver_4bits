@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=WH160x.map -O0 --gc-sections -lm -lgcc -lc -LC:\CooCox\CoIDE\configuration\ProgramData\WH160x -TC:\CooCox\CoIDE\configuration\ProgramData\WH160x/arm-gcc-link.ld -g">
+      <target file="WH160x.elf" lastModified="14d9c09ca25">
+         <source file="..\obj\stm32f10x_tim.o" lastModified="14d9c09c35e"/>
+         <source file="..\obj\startup_stm32f10x_md_vl.o" lastModified="14d9c09c3ac"/>
+         <source file="..\obj\wh160x_data_exchange.o" lastModified="14d9c09c41a"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="14d9c09c477"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="14d9c09c4f5"/>
+         <source file="..\obj\stm32f10x_dac.o" lastModified="14d9c09c572"/>
+         <source file="..\obj\main.o" lastModified="14d9c09c67c"/>
+         <source file="..\obj\wh160x_buffer.o" lastModified="14d9c09c6d9"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="14d9c09c776"/>
+         <source file="..\obj\wh160x_driver.o" lastModified="14d9c09c7f3"/>
+      </target>
+   </processor>
+</history>
