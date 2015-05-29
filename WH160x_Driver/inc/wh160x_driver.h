@@ -76,4 +76,13 @@ uint8_t LCD_PrintChar(unsigned char c);
  */
 void LCD_PrintString(unsigned char *string);
 
+/*
+ * ¬ывод числа в шестнадцатиричном формате 0xNNNN.
+ * ≈сли длина числа превышает заданное количество символов,
+ * старшие разр€ды отбрасываютс€.
+ * @param number - выводимое число.
+ * @param length - количество символов после 0x.
+ */
+void LCD_PrintHex(long number, uint8_t length);
+
 #endif /* __WH160x_DRIVER */

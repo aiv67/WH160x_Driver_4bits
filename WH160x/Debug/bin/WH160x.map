@@ -300,6 +300,7 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\main.o
  .data          0x00000000        0x0 ..\obj\main.o
  .bss           0x00000000        0x0 ..\obj\main.o
+ .text.hex      0x00000000       0x70 ..\obj\main.o
  .text          0x00000000        0x0 ..\obj\wh160x_buffer.o
  .data          0x00000000        0x0 ..\obj\wh160x_buffer.o
  .text          0x00000000        0x0 ..\obj\stm32f10x_rcc.o
@@ -380,7 +381,7 @@ Linker script and memory map
 
                 0x20002000                _eram = 0x20002000
 
-.text           0x08000000     0x10d0
+.text           0x08000000     0x1134
  *(.isr_vector)
  .isr_vector    0x08000000      0x124 ..\obj\startup_stm32f10x_md_vl.o
                 0x08000000                g_pfnVectors
@@ -441,80 +442,81 @@ Linker script and memory map
                 0x08000180                I2C1_ER_IRQHandler
                 0x08000180                TIM1_BRK_TIM15_IRQHandler
  .text.LCD_SendByte
-                0x08000188      0x124 ..\obj\wh160x_data_exchange.o
+                0x08000188      0x12c ..\obj\wh160x_data_exchange.o
                 0x08000188                LCD_SendByte
  .text.LCD_Out4BitsToPort
-                0x080002ac       0xa0 ..\obj\wh160x_data_exchange.o
-                0x080002ac                LCD_Out4BitsToPort
+                0x080002b4       0xa0 ..\obj\wh160x_data_exchange.o
+                0x080002b4                LCD_Out4BitsToPort
  .text.TIM6_DAC_IRQHandler
-                0x0800034c       0x5c ..\obj\wh160x_data_exchange.o
-                0x0800034c                TIM6_DAC_IRQHandler
+                0x08000354       0x5c ..\obj\wh160x_data_exchange.o
+                0x08000354                TIM6_DAC_IRQHandler
  .text.LCD_TimeInterval
-                0x080003a8       0x34 ..\obj\wh160x_data_exchange.o
-                0x080003a8                LCD_TimeInterval
+                0x080003b0       0x34 ..\obj\wh160x_data_exchange.o
+                0x080003b0                LCD_TimeInterval
  .text.LCD_DataStrobe
-                0x080003dc       0x18 ..\obj\wh160x_data_exchange.o
-                0x080003dc                LCD_DataStrobe
+                0x080003e4       0x18 ..\obj\wh160x_data_exchange.o
+                0x080003e4                LCD_DataStrobe
  .text.SystemInit
-                0x080003f4       0x6c ..\obj\system_stm32f10x.o
-                0x080003f4                SystemInit
+                0x080003fc       0x6c ..\obj\system_stm32f10x.o
+                0x080003fc                SystemInit
  .text.SetSysClock
-                0x08000460        0xc ..\obj\system_stm32f10x.o
+                0x08000468        0xc ..\obj\system_stm32f10x.o
  .text.SetSysClockTo24
-                0x0800046c       0xd4 ..\obj\system_stm32f10x.o
+                0x08000474       0xd4 ..\obj\system_stm32f10x.o
  .text.GPIO_Init
-                0x08000540      0x180 ..\obj\stm32f10x_gpio.o
-                0x08000540                GPIO_Init
- .text.Delay    0x080006c0       0x24 ..\obj\main.o
-                0x080006c0                Delay
- .text.hex      0x080006e4       0x70 ..\obj\main.o
-                0x080006e4                hex
+                0x08000548      0x180 ..\obj\stm32f10x_gpio.o
+                0x08000548                GPIO_Init
+ .text.Delay    0x080006c8       0x24 ..\obj\main.o
+                0x080006c8                Delay
  .text.printCode
-                0x08000754       0x5c ..\obj\main.o
-                0x08000754                printCode
- .text.main     0x080007b0      0x220 ..\obj\main.o
-                0x080007b0                main
+                0x080006ec       0x50 ..\obj\main.o
+                0x080006ec                printCode
+ .text.main     0x0800073c      0x220 ..\obj\main.o
+                0x0800073c                main
  .text.LCD_BufferPush
-                0x080009d0       0x74 ..\obj\wh160x_buffer.o
-                0x080009d0                LCD_BufferPush
+                0x0800095c       0x74 ..\obj\wh160x_buffer.o
+                0x0800095c                LCD_BufferPush
  .text.LCD_BufferPop
-                0x08000a44       0x74 ..\obj\wh160x_buffer.o
-                0x08000a44                LCD_BufferPop
+                0x080009d0       0x74 ..\obj\wh160x_buffer.o
+                0x080009d0                LCD_BufferPop
  .text.RCC_GetClocksFreq
-                0x08000ab8      0x15c ..\obj\stm32f10x_rcc.o
-                0x08000ab8                RCC_GetClocksFreq
+                0x08000a44      0x15c ..\obj\stm32f10x_rcc.o
+                0x08000a44                RCC_GetClocksFreq
  .text.RCC_APB2PeriphClockCmd
-                0x08000c14       0x3c ..\obj\stm32f10x_rcc.o
-                0x08000c14                RCC_APB2PeriphClockCmd
+                0x08000ba0       0x3c ..\obj\stm32f10x_rcc.o
+                0x08000ba0                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x08000c50       0x3c ..\obj\stm32f10x_rcc.o
-                0x08000c50                RCC_APB1PeriphClockCmd
+                0x08000bdc       0x3c ..\obj\stm32f10x_rcc.o
+                0x08000bdc                RCC_APB1PeriphClockCmd
  .text.NVIC_EnableIRQ
-                0x08000c8c       0x30 ..\obj\wh160x_driver.o
+                0x08000c18       0x30 ..\obj\wh160x_driver.o
  .text.LCD_MCPortsInit
-                0x08000cbc      0x120 ..\obj\wh160x_driver.o
-                0x08000cbc                LCD_MCPortsInit
+                0x08000c48      0x120 ..\obj\wh160x_driver.o
+                0x08000c48                LCD_MCPortsInit
  .text.LCD_CheckConfig
-                0x08000ddc       0x10 ..\obj\wh160x_driver.o
-                0x08000ddc                LCD_CheckConfig
+                0x08000d68       0x10 ..\obj\wh160x_driver.o
+                0x08000d68                LCD_CheckConfig
  .text.GPIO_Config
-                0x08000dec       0x38 ..\obj\wh160x_driver.o
-                0x08000dec                GPIO_Config
+                0x08000d78       0x38 ..\obj\wh160x_driver.o
+                0x08000d78                GPIO_Config
  .text.LCD_Init
-                0x08000e24       0xc8 ..\obj\wh160x_driver.o
-                0x08000e24                LCD_Init
+                0x08000db0       0xc8 ..\obj\wh160x_driver.o
+                0x08000db0                LCD_Init
  .text.LCD_PrintCommand
-                0x08000eec       0x30 ..\obj\wh160x_driver.o
-                0x08000eec                LCD_PrintCommand
+                0x08000e78       0x30 ..\obj\wh160x_driver.o
+                0x08000e78                LCD_PrintCommand
  .text.LCD_PrintByte
-                0x08000f1c       0x1c ..\obj\wh160x_driver.o
-                0x08000f1c                LCD_PrintByte
+                0x08000ea8       0x1c ..\obj\wh160x_driver.o
+                0x08000ea8                LCD_PrintByte
  .text.LCD_PrintChar
-                0x08000f38       0x24 ..\obj\wh160x_driver.o
-                0x08000f38                LCD_PrintChar
+                0x08000ec4       0x24 ..\obj\wh160x_driver.o
+                0x08000ec4                LCD_PrintChar
  .text.LCD_PrintString
-                0x08000f5c       0x30 ..\obj\wh160x_driver.o
-                0x08000f5c                LCD_PrintString
+                0x08000ee8       0x30 ..\obj\wh160x_driver.o
+                0x08000ee8                LCD_PrintString
+ .text.LCD_PrintHex
+                0x08000f18       0xd8 ..\obj\wh160x_driver.o
+                0x08000f18                LCD_PrintHex
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -528,40 +530,40 @@ Linker script and memory map
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x08000f8c       0x44 ..\obj\main.o
- .rodata        0x08000fd0      0x100 ..\obj\wh160x_driver.o
-                0x08000fd0                LCD_charTable
+ .rodata        0x08000ff0       0x44 ..\obj\main.o
+ .rodata        0x08001034      0x100 ..\obj\wh160x_driver.o
+                0x08001034                LCD_charTable
  *(.eh_fram e*)
 
-.glue_7         0x080010d0        0x0
+.glue_7         0x08001134        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x080010d0        0x0
+.glue_7t        0x08001134        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x080010d0        0x0
+.vfp11_veneer   0x08001134        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x080010d0        0x0
+.v4_bx          0x08001134        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x080010d0        0x0
+.iplt           0x08001134        0x0
  .iplt          0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.rel.dyn        0x080010d0        0x0
+.rel.dyn        0x08001134        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080010d0                __exidx_start = .
+                0x08001134                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x080010d0                __exidx_end = .
-                0x080010d0                __etext = .
-                0x080010d0                _sidata = __etext
+                0x08001134                __exidx_end = .
+                0x08001134                __etext = .
+                0x08001134                _sidata = __etext
 
-.data           0x20000000       0x14 load address 0x080010d0
+.data           0x20000000       0x14 load address 0x08001134
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -586,10 +588,10 @@ Linker script and memory map
                 0x20000014                __data_end__ = .
                 0x20000014                _edata = __data_end__
 
-.igot.plt       0x20000014        0x0 load address 0x080010e4
+.igot.plt       0x20000014        0x0 load address 0x08001148
  .igot.plt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.bss            0x20000014      0x108 load address 0x080010e4
+.bss            0x20000014      0x108 load address 0x08001148
                 0x20000014                . = ALIGN (0x4)
                 0x20000014                __bss_start__ = .
                 0x20000014                _sbss = __bss_start__
@@ -617,7 +619,7 @@ Linker script and memory map
  *(.heap*)
                 0x2000011c                __HeapLimit = .
 
-.co_stack       0x2000011c      0x404 load address 0x080011ec
+.co_stack       0x2000011c      0x404 load address 0x08001250
                 0x20000120                . = ALIGN (0x8)
  *fill*         0x2000011c        0x4 
  *(.co_stack .co_stack.*)
@@ -647,7 +649,7 @@ LOAD c:/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib
 END GROUP
 OUTPUT(WH160x.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x265b
+.debug_info     0x00000000     0x26c9
  .debug_info    0x00000000       0xe9 ..\obj\startup_stm32f10x_md_vl.o
  .debug_info    0x000000e9      0x3ff ..\obj\wh160x_data_exchange.o
  .debug_info    0x000004e8      0x41a ..\obj\system_stm32f10x.o
@@ -655,9 +657,9 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .debug_info    0x00000fe9      0x234 ..\obj\main.o
  .debug_info    0x0000121d      0x14c ..\obj\wh160x_buffer.o
  .debug_info    0x00001369      0x8fa ..\obj\stm32f10x_rcc.o
- .debug_info    0x00001c63      0x9f8 ..\obj\wh160x_driver.o
+ .debug_info    0x00001c63      0xa66 ..\obj\wh160x_driver.o
 
-.debug_abbrev   0x00000000      0xa4c
+.debug_abbrev   0x00000000      0xa64
  .debug_abbrev  0x00000000       0xa7 ..\obj\startup_stm32f10x_md_vl.o
  .debug_abbrev  0x000000a7       0xe8 ..\obj\wh160x_data_exchange.o
  .debug_abbrev  0x0000018f      0x14c ..\obj\system_stm32f10x.o
@@ -665,9 +667,9 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .debug_abbrev  0x000004a3      0x12c ..\obj\main.o
  .debug_abbrev  0x000005cf       0xb5 ..\obj\wh160x_buffer.o
  .debug_abbrev  0x00000684      0x1ba ..\obj\stm32f10x_rcc.o
- .debug_abbrev  0x0000083e      0x20e ..\obj\wh160x_driver.o
+ .debug_abbrev  0x0000083e      0x226 ..\obj\wh160x_driver.o
 
-.debug_aranges  0x00000000      0x330
+.debug_aranges  0x00000000      0x338
  .debug_aranges
                 0x00000000       0x28 ..\obj\startup_stm32f10x_md_vl.o
  .debug_aranges
@@ -683,9 +685,9 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .debug_aranges
                 0x000001a8      0x120 ..\obj\stm32f10x_rcc.o
  .debug_aranges
-                0x000002c8       0x68 ..\obj\wh160x_driver.o
+                0x000002c8       0x70 ..\obj\wh160x_driver.o
 
-.debug_ranges   0x00000000      0x2b0
+.debug_ranges   0x00000000      0x2b8
  .debug_ranges  0x00000000       0x18 ..\obj\startup_stm32f10x_md_vl.o
  .debug_ranges  0x00000018       0x30 ..\obj\wh160x_data_exchange.o
  .debug_ranges  0x00000048       0x28 ..\obj\system_stm32f10x.o
@@ -693,19 +695,19 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .debug_ranges  0x00000108       0x28 ..\obj\main.o
  .debug_ranges  0x00000130       0x18 ..\obj\wh160x_buffer.o
  .debug_ranges  0x00000148      0x110 ..\obj\stm32f10x_rcc.o
- .debug_ranges  0x00000258       0x58 ..\obj\wh160x_driver.o
+ .debug_ranges  0x00000258       0x60 ..\obj\wh160x_driver.o
 
-.debug_line     0x00000000     0x1262
+.debug_line     0x00000000     0x12a1
  .debug_line    0x00000000       0xa6 ..\obj\startup_stm32f10x_md_vl.o
- .debug_line    0x000000a6      0x1e5 ..\obj\wh160x_data_exchange.o
- .debug_line    0x0000028b      0x1be ..\obj\system_stm32f10x.o
- .debug_line    0x00000449      0x357 ..\obj\stm32f10x_gpio.o
- .debug_line    0x000007a0      0x1e5 ..\obj\main.o
- .debug_line    0x00000985      0x13a ..\obj\wh160x_buffer.o
- .debug_line    0x00000abf      0x47c ..\obj\stm32f10x_rcc.o
- .debug_line    0x00000f3b      0x327 ..\obj\wh160x_driver.o
+ .debug_line    0x000000a6      0x1ec ..\obj\wh160x_data_exchange.o
+ .debug_line    0x00000292      0x1be ..\obj\system_stm32f10x.o
+ .debug_line    0x00000450      0x357 ..\obj\stm32f10x_gpio.o
+ .debug_line    0x000007a7      0x1e5 ..\obj\main.o
+ .debug_line    0x0000098c      0x13a ..\obj\wh160x_buffer.o
+ .debug_line    0x00000ac6      0x47c ..\obj\stm32f10x_rcc.o
+ .debug_line    0x00000f42      0x35f ..\obj\wh160x_driver.o
 
-.debug_str      0x00000000     0x1237
+.debug_str      0x00000000     0x1252
  .debug_str     0x00000000      0x139 ..\obj\startup_stm32f10x_md_vl.o
                                 0x14b (size before relaxing)
  .debug_str     0x00000139      0x27a ..\obj\wh160x_data_exchange.o
@@ -720,8 +722,8 @@ OUTPUT(WH160x.elf elf32-littlearm)
                                 0x1c0 (size before relaxing)
  .debug_str     0x000009fc      0x3bb ..\obj\stm32f10x_rcc.o
                                 0x676 (size before relaxing)
- .debug_str     0x00000db7      0x480 ..\obj\wh160x_driver.o
-                                0x8c5 (size before relaxing)
+ .debug_str     0x00000db7      0x49b ..\obj\wh160x_driver.o
+                                0x8ed (size before relaxing)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 ..\obj\startup_stm32f10x_md_vl.o
@@ -753,7 +755,7 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .ARM.attributes
                 0x00000165       0x33 ..\obj\wh160x_driver.o
 
-.debug_frame    0x00000000      0xbf8
+.debug_frame    0x00000000      0xc24
  .debug_frame   0x00000000       0x4c ..\obj\startup_stm32f10x_md_vl.o
  .debug_frame   0x0000004c       0xa8 ..\obj\wh160x_data_exchange.o
  .debug_frame   0x000000f4       0x98 ..\obj\system_stm32f10x.o
@@ -761,4 +763,4 @@ OUTPUT(WH160x.elf elf32-littlearm)
  .debug_frame   0x0000045c       0xa4 ..\obj\main.o
  .debug_frame   0x00000500       0x60 ..\obj\wh160x_buffer.o
  .debug_frame   0x00000560      0x51c ..\obj\stm32f10x_rcc.o
- .debug_frame   0x00000a7c      0x17c ..\obj\wh160x_driver.o
+ .debug_frame   0x00000a7c      0x1a8 ..\obj\wh160x_driver.o

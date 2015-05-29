@@ -73,7 +73,7 @@ void LCD_SendByte(void)
 		{
 			// ѕровер€ем команду. ≈сли команда требует много времени
 			// дл€ работы, задаем большую длительность паузы.
-			if (byteToSend == LCD_CLEAR_COMMAND)
+			if (byteToSend == LCD_CLEAR_COMMAND || byteToSend == LCD_RETURN_HOME)
 			{
 				lcdState |= LCD_LONG_COMMAND;
 			}

@@ -35,7 +35,7 @@ void printCode(char c)
 	char buffer[5] = "0x00";
 	LCD_PrintChar(c);
 	LCD_PrintChar('=');
-	LCD_PrintString(hex(c, buffer));
+	LCD_PrintHex(c, 2);
 	LCD_PrintString("  ");
 	Delay(500000);
 }

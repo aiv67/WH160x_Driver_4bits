@@ -161,3 +161,33 @@ void LCD_PrintString(unsigned char *string)
 		string++;
 	}
 }
+
+void LCD_PrintHex(long number, uint8_t length)
+{
+	unsigned char result[length + 3];
+	uint8_t i;
+	for (i = 0; i < length + 2; i++)
+	{
+		result[i] = '0';
+	}
+	result[1] = 'x';
+	result[length + 2] = 0;
+
+	i = length + 1;
+	uint8_t digit;
+	while (number)
+	{
+		digit = number & LSB_MASK;
+		if (digit < 10)
+			result[i] = '0' + digit;
+		else
+			result[i] = '7' + digit;
+		if (--i == 1)
+		{
+			break;
+		}
+		number = number >> 4;
+	}
+
+	LCD_PrintString(result);
+}
