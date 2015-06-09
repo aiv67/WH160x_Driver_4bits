@@ -36,7 +36,7 @@ void printCode(char c)
 	LCD_PrintChar(c);
 	LCD_PrintChar('=');
 	LCD_PrintHex(c, 2);
-	Delay(3000000);
+	Delay(1000000);
 }
 
 int main(void)
