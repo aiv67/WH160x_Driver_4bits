@@ -7,7 +7,7 @@
 
 // Тип дисплея WH1602 или WH1604, определяем количество
 // строк и столбцов для конкретной модели
-#define LCD_TYPE_WH1602
+#define LCD_TYPE_WH1604
 
 #ifdef LCD_TYPE_WH1602
 #define LCD_LINES					2
@@ -69,9 +69,11 @@
 #define LCD_ON						0x04
 
 // Включение курсора (символ подчеркивания)
+#define LCD_CURSOR_OFF				0x00
 #define LCD_CURSOR_ON				0x02
 
 // Включение мигания курсора
+#define LCD_BLINK_OFF				0x00
 #define LCD_BLINK_ON				0x01
 
 // Сброс (объявление для разных целей).

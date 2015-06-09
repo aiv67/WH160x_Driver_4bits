@@ -135,7 +135,37 @@ uint8_t LCD_Init(uint8_t cursorOn,
 
 void LCD_SetCursorPos(uint8_t row, uint8_t col)
 {
+	if (row > LCD_LINES || col > LCD_COLUMNS)
+		return;
 
+#ifdef LCD_TYPE_WH1602
+	uint8_t address = row * 0x40 + col;
+#endif /* LCD_TYPE_WH1602 */
+
+#ifdef LCD_TYPE_WH1604
+	uint8_t address = (row / 2) * 0x10 + (row % 2) * 0x40 + col;
+/*
+	uint8_t address;
+	switch (row)
+	{
+	case 0:
+		address = col;
+		break;
+	case 1:
+		address = 0x40 + col;
+		break;
+	case 2:
+		address = 0x10 + col;
+		break;
+	case 3:
+		address = 0x50 + col;
+		break;
+	}
+*/
+#endif /* LCD_TYPE_WH1604 */
+
+	address |= 0x80;
+	LCD_PrintCommand(address);
 }
 
 void LCD_PrintCommand(unsigned char command)

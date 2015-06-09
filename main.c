@@ -5,9 +5,9 @@
 #include "inc/wh160x_driver.h"
 
 
-void Delay(uint32_t time)
+void Delay(uint64_t time)
 {
-    volatile uint32_t i = 2 * time;
+    volatile uint64_t i = 2 * time;
 
     while (i-- > 0);
 }
@@ -36,26 +36,24 @@ void printCode(char c)
 	LCD_PrintChar(c);
 	LCD_PrintChar('=');
 	LCD_PrintHex(c, 2);
-	LCD_PrintString("  ");
-	Delay(500000);
+	Delay(1000000);
 }
 
 int main(void)
 {
-	LCD_Init(LCD_CURSOR_ON, LCD_BLINK_ON);
+	LCD_Init(LCD_CURSOR_OFF, LCD_BLINK_OFF);
 
 	Delay(1000000);
 
 	int i;
 
+	uint8_t row = 0;
+	uint8_t col = 0xFF;
 	for (i = 32; i < 256; i++)
 	{
+		int pos = i % 8;
+		LCD_SetCursorPos(pos / 2, (pos % 2) * 8);
 		printCode((char) i);
-	}
-
-	for (i = 0; i < 8; i++)
-	{
-		LCD_PrintChar(' ');
 	}
 
 	char digits[6] = "00000\0";
@@ -71,9 +69,10 @@ int main(void)
 		i--;
 		l /= 10;
 	}
+	LCD_SetCursorPos(0, 0);
 	LCD_PrintString("SYSCLK=");
 	LCD_PrintString(digits);
-	LCD_PrintString("êÃö ");
+	LCD_PrintString("êÃö");
 
 	l = RCC_Clock.PCLK1_Frequency / 1000;
 
@@ -84,9 +83,10 @@ int main(void)
 		i--;
 		l /= 10;
 	}
+	LCD_SetCursorPos(1, 0);
 	LCD_PrintString("PCLK1 =");
 	LCD_PrintString(digits);
-	LCD_PrintString("êÃö ");
+	LCD_PrintString("êÃö");
 
 	l = RCC_Clock.HCLK_Frequency / 1000;
 
@@ -97,9 +97,10 @@ int main(void)
 		i--;
 		l /= 10;
 	}
-	LCD_PrintString("        HCLK  =");
+	LCD_SetCursorPos(2, 0);
+	LCD_PrintString("HCLK  =");
 	LCD_PrintString(digits);
-	LCD_PrintString("êÃö ");
+	LCD_PrintString("êÃö");
 
 	l = RCC_Clock.PCLK2_Frequency / 1000;
 
@@ -110,9 +111,10 @@ int main(void)
 		i--;
 		l /= 10;
 	}
+	LCD_SetCursorPos(3, 0);
 	LCD_PrintString("PCLK2 =");
 	LCD_PrintString(digits);
-	LCD_PrintString("êÃö ");
+	LCD_PrintString("êÃö");
 
     while(1)
     {
