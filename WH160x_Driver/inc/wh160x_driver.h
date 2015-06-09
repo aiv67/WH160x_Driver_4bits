@@ -85,4 +85,10 @@ void LCD_PrintString(unsigned char *string);
  */
 void LCD_PrintHex(long number, uint8_t length);
 
+/**
+ * Вывод целого числа в десятичном виде.
+ * @param number - выводимое число.
+ */
+void LCD_PrintDec(long number);
+
 #endif /* __WH160x_DRIVER */

@@ -17,6 +17,7 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
@@ -31,23 +32,28 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.c" partName="wh160x_driver.c" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/src/wh160x_driver.c" title="wh160x_driver.c" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/src/wh160x_driver.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/src/wh160x_driver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4738" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="109" selectionOffset="5649" selectionTopPixel="544"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Projects/STM32/WH160x_Driver_4bits/main.c" title="main.c" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Projects/STM32/WH160x_Driver_4bits/main.c" title="main.c" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="623" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="631" selectionTopPixel="164"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.h" partName="wh160x_driver.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_driver.h" title="wh160x_driver.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_driver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="46" selectionOffset="2070" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2068" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_defines.h" partName="wh160x_defines.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_defines.h" title="wh160x_defines.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_defines.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_defines.h" partName="wh160x_defines.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_defines.h" title="wh160x_defines.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_defines.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="266" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1080" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_char_table.h" partName="wh160x_char_table.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" title="wh160x_char_table.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1387" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2009" selectionTopPixel="0"/>
+</editor>
+<editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
+<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
+</input>
 </editor>
 </editors>
 <views>
@@ -129,11 +135,15 @@
 <hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
-<view id="org.coocox.builder.ui.views.ProjectView"/>
 <fastViewBars>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@848c4b" orientation="512" selectedTabId="org.coocox.builder.ui.views.ProjectView" style="0">
+<fastViews>
+<view id="org.coocox.builder.ui.views.ProjectView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@44f49" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.32517838"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.32435232"/>
 <view id="org.eclipse.search.ui.views.SearchView" ratio="0.5514781"/>
 </fastViews>
 </fastViewBar>
@@ -146,7 +156,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@6efc85">
-<folder appearance="2" expanded="2">
+<folder appearance="2" expanded="0">
 <page content="org.coocox.component.ui.ComponentView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -177,11 +187,9 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44974095" ratioLeft="434" ratioRight="531" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@848c4b" ratio="0.36994818" ratioLeft="357" ratioRight="608" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6efc85">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.coocox.builder.ui.views.ProjectView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -295,168 +303,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/src/wh160x_buffer.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/src/wh160x_driver.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/src/wh160x_driver.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/src/wh160x_data_exchange.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
+</editor>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
 </editors>
-<item historyLabel="wh160x_driver.c" index="2">
-<position info="not_deleted" x="4897" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5896" y="0"/>
 </item>
-<item historyLabel="wh160x_buffer.c" index="0">
-<position info="not_deleted" x="30" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="619" y="0"/>
-</item>
-<item historyLabel="wh160x_driver.h" index="3">
+<item historyLabel="wh160x_driver.h" index="2">
 <position info="not_deleted" x="2070" y="46"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="5184" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="623" y="0"/>
 </item>
-<item historyLabel="wh160x_defines.h" index="5">
-<position info="not_deleted" x="2010" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5867" y="32"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4318" y="0"/>
-</item>
-<item historyLabel="wh160x_defines.h" index="5">
-<position info="not_deleted" x="1553" y="0"/>
-</item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4318" y="0"/>
-</item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4514" y="0"/>
-</item>
-<item historyLabel="wh160x_defines.h" index="5">
-<position info="not_deleted" x="379" y="22"/>
-</item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4514" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="860" y="0"/>
-</item>
-<item historyLabel="wh160x_defines.h" index="5">
-<position info="not_deleted" x="379" y="22"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="860" y="0"/>
-</item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4457" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="657" y="0"/>
-</item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4457" y="0"/>
-</item>
-<item historyLabel="wh160x_defines.h" index="6">
-<position info="not_deleted" x="379" y="22"/>
-</item>
-<item historyLabel="main.c" index="7">
+<item historyLabel="wh160x_driver.c" index="1">
 <position/>
 </item>
-<item historyLabel="wh160x_defines.h" index="6">
-<position info="not_deleted" x="2211" y="11"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="623" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="709" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position/>
 </item>
-<item historyLabel="wh160x_defines.h" index="6">
-<position info="not_deleted" x="2130" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="623" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="714" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5892" y="0"/>
 </item>
-<item historyLabel="wh160x_defines.h" index="6">
-<position info="not_deleted" x="2130" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="623" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="729" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position/>
 </item>
-<item historyLabel="wh160x_defines.h" index="6">
-<position info="not_deleted" x="2130" y="0"/>
+<item historyLabel="main.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="898" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5942" y="0"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4392" y="0"/>
+<item historyLabel="main.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="898" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6084" y="0"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4392" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6202" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="898" y="0"/>
+<item historyLabel="main.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="945" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="804" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5965" y="33"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4392" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6117" y="0"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4703" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6109" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="804" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5965" y="33"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1207" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6064" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1182" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1203" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5494" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1116" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4703" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5494" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1116" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="6040" y="0"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4703" y="0"/>
+<item historyLabel="Configuration" index="4"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5959" y="0"/>
 </item>
-<item historyLabel="wh160x_data_exchange.c" index="8">
-<position info="not_deleted" x="1719" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="1119" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="1147" y="0"/>
 </item>
-<item historyLabel="wh160x_driver.c" index="4">
-<position info="not_deleted" x="4585" y="0"/>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5955" y="0"/>
 </item>
-<item historyLabel="wh160x_char_table.h" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="main.c" index="3">
+<position/>
 </item>
-<item historyLabel="main.c" index="10">
-<position info="not_deleted" x="1067" y="0"/>
+<item historyLabel="wh160x_driver.h" index="2">
+<position info="not_deleted" x="2068" y="0"/>
 </item>
-<item active="true" historyLabel="wh160x_defines.h" index="11">
-<position info="not_deleted" x="2130" y="0"/>
+<item historyLabel="wh160x_defines.h" index="0">
+<position info="not_deleted" x="1017" y="0"/>
+</item>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
+</item>
+<item historyLabel="wh160x_defines.h" index="0">
+<position info="not_deleted" x="1080" y="0"/>
+</item>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="782" y="126"/>
+</item>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="1279" y="0"/>
+</item>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5955" y="0"/>
+</item>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5931" y="0"/>
+</item>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5995" y="0"/>
+</item>
+<item historyLabel="wh160x_driver.c" index="1">
+<position info="not_deleted" x="5602" y="0"/>
+</item>
+<item historyLabel="wh160x_char_table.h" index="5">
+<position info="not_deleted" x="1543" y="0"/>
+</item>
+<item historyLabel="wh160x_defines.h" index="0">
+<position info="not_deleted" x="1080" y="0"/>
+</item>
+<item historyLabel="wh160x_char_table.h" index="5">
+<position info="not_deleted" x="1543" y="0"/>
+</item>
+<item historyLabel="wh160x_defines.h" index="0">
+<position info="not_deleted" x="1080" y="0"/>
+</item>
+<item historyLabel="wh160x_char_table.h" index="5">
+<position info="not_deleted" x="2009" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="3">
+<position info="not_deleted" x="1279" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -465,6 +467,11 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
+<persistable>
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
+</persistable>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_char_table.h" tooltip="WH160x/WH160x_Driver/inc/wh160x_char_table.h">
 <persistable path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
 </file>
@@ -506,9 +513,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.h" tooltip="WH160x/WH160x_Driver/inc/wh160x_driver.h">
 <persistable path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_rcc.h" tooltip="WH160x/stm_lib/inc/stm32f10x_rcc.h">
-<persistable path="/WH160x/stm_lib/inc/stm32f10x_rcc.h"/>
 </file>
 </mruList>
 </workbench>
