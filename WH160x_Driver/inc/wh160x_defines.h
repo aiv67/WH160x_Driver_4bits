@@ -34,9 +34,9 @@
 #define BIT_0_MASK			 		0x01
 
 // Временные параметры
-#define LCD_STROBE_DURATION			10		// Длительность строб-импульса.
-#define LCD_BYTE_PAUSE_DURATION		400		// Пауза между байтами.
-#define LCD_LONG_COMMAND_DURATION	10000	// Пауза между байтами в длительных командах (clear, set position).
+#define LCD_STROBE_DURATION			2		// Длительность строб-импульса.
+#define LCD_BYTE_PAUSE_DURATION		40		// Пауза между байтами.
+#define LCD_LONG_COMMAND_DURATION	2000	// Пауза между байтами в длительных командах (clear, set position).
 #define LCD_START_PAUSE_DURATION	20000	// Задержка при включении дисплея.
 
 // Байт, отправляемый в дисплей при инициализации

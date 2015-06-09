@@ -65,7 +65,12 @@
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_128.elf"/>
-      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd D:/Projects/STM32/WH160x_Driver_4bits/WH160x/Debug/bin restore WH160x.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd D:/Projects/STM32/WH160x_Driver_4bits/WH160x/Debug/bin
+restore WH160x.elf
+set {unsigned int*}0xE000ED08 = 0x20000000
+set $sp = {unsigned int*}0x20000000
+set $pc = {unsigned int*}0x20000004
+"/>
     </DebugOption>
     <ExcludeFile/>
   </Target>
@@ -78,8 +83,8 @@
     <Component id="464" name="CMSIS Boot" path="" type="2"/>
   </Components>
   <Files>
-    <File name="cmsis_boot/startup/startup_stm32f10x_md_vl.c" path="cmsis_boot/startup/startup_stm32f10x_md_vl.c" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_buffer.h" path="WH160x_Driver/inc/wh160x_buffer.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f10x_md_vl.c" path="cmsis_boot/startup/startup_stm32f10x_md_vl.c" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_driver.h" path="WH160x_Driver/inc/wh160x_driver.h" type="1"/>
@@ -95,8 +100,8 @@
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dac.h" path="stm_lib/inc/stm32f10x_dac.h" type="1"/>
     <File name="WH160x_Driver/inc" path="" type="2"/>
-    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_include_libraries.h" path="WH160x_Driver/inc/wh160x_include_libraries.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="WH160x_Driver" path="" type="2"/>
     <File name="stm_lib/src" path="" type="2"/>
     <File name="stm_lib/src/stm32f10x_dac.c" path="stm_lib/src/stm32f10x_dac.c" type="1"/>
@@ -108,12 +113,12 @@
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="WH160x_Driver/src/wh160x_buffer.c" path="WH160x_Driver/src/wh160x_buffer.c" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_data_exchange.h" path="WH160x_Driver/inc/wh160x_data_exchange.h" type="1"/>
-    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
-    <File name="WH160x_Driver/src" path="" type="2"/>
     <File name="WH160x_Driver/inc/wh160x_defines.h" path="WH160x_Driver/inc/wh160x_defines.h" type="1"/>
+    <File name="WH160x_Driver/src" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
-    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_port_def.h" path="WH160x_Driver/inc/wh160x_port_def.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>

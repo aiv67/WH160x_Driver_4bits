@@ -194,24 +194,25 @@ void LCD_PrintString(unsigned char *string)
 
 void LCD_PrintHex(long number, uint8_t length)
 {
-	unsigned char result[length + 3];
+	unsigned char stringForPrint[length + 3];
 	uint8_t i;
 	for (i = 0; i < length + 2; i++)
 	{
-		result[i] = '0';
+		stringForPrint[i] = '0';
 	}
-	result[1] = 'x';
-	result[length + 2] = 0;
+	stringForPrint[1] = 'x';
+	stringForPrint[length + 2] = 0;
 
 	i = length + 1;
 	uint8_t digit;
 	while (number)
 	{
 		digit = number & LSB_MASK;
-		if (digit < 10)
-			result[i] = '0' + digit;
-		else
-			result[i] = '7' + digit;
+		stringForPrint[i] = (digit < 10) ? '0' + digit : '7' + digit;
+//		if (digit < 10)
+//			stringForPrint[i] = '0' + digit;
+//		else
+//			stringForPrint[i] = '7' + digit;
 		if (--i == 1)
 		{
 			break;
@@ -219,5 +220,23 @@ void LCD_PrintHex(long number, uint8_t length)
 		number = number >> 4;
 	}
 
-	LCD_PrintString(result);
+	LCD_PrintString(stringForPrint);
+}
+
+void LCD_PrintDec(long number)
+{
+	unsigned char stringTemplate[21] = "00000000000000000000";
+
+	unsigned char *stringForPrint;
+	for (stringForPrint = stringTemplate + 19; ; stringForPrint--)
+	{
+		*stringForPrint = (number % 10) + '0';
+		number /= 10;
+		if (!number)
+		{
+			break;
+		}
+	}
+
+	LCD_PrintString(stringForPrint);
 }

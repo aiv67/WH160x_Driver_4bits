@@ -36,7 +36,7 @@ void printCode(char c)
 	LCD_PrintChar(c);
 	LCD_PrintChar('=');
 	LCD_PrintHex(c, 2);
-	Delay(1000000);
+	Delay(3000000);
 }
 
 int main(void)
@@ -60,60 +60,29 @@ int main(void)
 
 	RCC_ClocksTypeDef RCC_Clock;
 	RCC_GetClocksFreq(&RCC_Clock);
-	uint32_t l = RCC_Clock.SYSCLK_Frequency / 1000;
 
-	i = 4;
-	while (l > 0)
-	{
-		digits[i] = (l % 10) + '0';
-		i--;
-		l /= 10;
-	}
+	uint32_t frequency = RCC_Clock.SYSCLK_Frequency / 1000;
 	LCD_SetCursorPos(0, 0);
 	LCD_PrintString("SYSCLK=");
-	LCD_PrintString(digits);
+	LCD_PrintDec(frequency);
 	LCD_PrintString("êÃö");
 
-	l = RCC_Clock.PCLK1_Frequency / 1000;
-
-	i = 4;
-	while (l > 0)
-	{
-		digits[i] = (l % 10) + '0';
-		i--;
-		l /= 10;
-	}
+	frequency = RCC_Clock.PCLK1_Frequency / 1000;
 	LCD_SetCursorPos(1, 0);
 	LCD_PrintString("PCLK1 =");
-	LCD_PrintString(digits);
+	LCD_PrintDec(frequency);
 	LCD_PrintString("êÃö");
 
-	l = RCC_Clock.HCLK_Frequency / 1000;
-
-	i = 4;
-	while (l > 0)
-	{
-		digits[i] = (l % 10) + '0';
-		i--;
-		l /= 10;
-	}
+	frequency = RCC_Clock.HCLK_Frequency / 1000;
 	LCD_SetCursorPos(2, 0);
 	LCD_PrintString("HCLK  =");
-	LCD_PrintString(digits);
+	LCD_PrintDec(frequency);
 	LCD_PrintString("êÃö");
 
-	l = RCC_Clock.PCLK2_Frequency / 1000;
-
-	i = 4;
-	while (l > 0)
-	{
-		digits[i] = (l % 10) + '0';
-		i--;
-		l /= 10;
-	}
+	frequency = RCC_Clock.PCLK2_Frequency / 1000;
 	LCD_SetCursorPos(3, 0);
 	LCD_PrintString("PCLK2 =");
-	LCD_PrintString(digits);
+	LCD_PrintDec(frequency);
 	LCD_PrintString("êÃö");
 
     while(1)
