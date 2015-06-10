@@ -34,9 +34,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/src/wh160x_driver.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="109" selectionOffset="5649" selectionTopPixel="544"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Projects/STM32/WH160x_Driver_4bits/main.c" title="main.c" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Projects/STM32/WH160x_Driver_4bits/main.c" title="main.c" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="631" selectionTopPixel="164"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1684" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.h" partName="wh160x_driver.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_driver.h" title="wh160x_driver.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_driver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
@@ -46,13 +46,12 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_defines.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1080" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_char_table.h" partName="wh160x_char_table.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" title="wh160x_char_table.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_char_table.h" partName="wh160x_char_table.h" path="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" title="wh160x_char_table.h" tooltip="D:/Projects/STM32/WH160x_Driver_4bits/WH160x_Driver/inc/wh160x_char_table.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2009" selectionTopPixel="0"/>
 </editor>
 <editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
+<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
 </input>
 </editor>
 </editors>
@@ -156,7 +155,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@6efc85">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.coocox.component.ui.ComponentView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -187,7 +186,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44974095" ratioLeft="434" ratioRight="531" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@848c4b" ratio="0.36994818" ratioLeft="357" ratioRight="608" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6efc85">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -311,10 +310,8 @@
 <org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
 </editor>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
 </editors>
-<item historyLabel="wh160x_driver.c" index="1">
-<position info="not_deleted" x="5896" y="0"/>
-</item>
 <item historyLabel="wh160x_driver.h" index="2">
 <position info="not_deleted" x="2070" y="46"/>
 </item>
@@ -457,8 +454,11 @@
 <item historyLabel="wh160x_char_table.h" index="5">
 <position info="not_deleted" x="2009" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="3">
 <position info="not_deleted" x="1279" y="0"/>
+</item>
+<item active="true" historyLabel="wh160x_char_table.h" index="6">
+<position info="not_deleted" x="2009" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -467,11 +467,6 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
-<persistable>
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="0"/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_char_table.h" tooltip="WH160x/WH160x_Driver/inc/wh160x_char_table.h">
 <persistable path="/WH160x/WH160x_Driver/inc/wh160x_char_table.h"/>
 </file>
@@ -510,6 +505,9 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_rcc.h" tooltip="WH160x/stm_lib/inc/stm32f10x_rcc.h">
 <persistable path="/WH160x/stm_lib/inc/stm32f10x_rcc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.h" tooltip="WH160x/WH160x_Driver/inc/wh160x_driver.h">
+<persistable path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wh160x_driver.h" tooltip="WH160x/WH160x_Driver/inc/wh160x_driver.h">
 <persistable path="/WH160x/WH160x_Driver/inc/wh160x_driver.h"/>
