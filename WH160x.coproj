@@ -72,14 +72,17 @@
   <Components path="./">
     <Component id="50" name="CMSIS core" path="" type="2"/>
     <Component id="440" name="RCC" path="" type="2"/>
+    <Component id="442" name="PWR" path="" type="2"/>
+    <Component id="443" name="BKP" path="" type="2"/>
     <Component id="444" name="GPIO" path="" type="2"/>
     <Component id="447" name="DAC" path="" type="2"/>
+    <Component id="448" name="RTC" path="" type="2"/>
     <Component id="456" name="TIM" path="" type="2"/>
     <Component id="464" name="CMSIS Boot" path="" type="2"/>
   </Components>
   <Files>
-    <File name="WH160x_Driver/inc/wh160x_buffer.h" path="WH160x_Driver/inc/wh160x_buffer.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md_vl.c" path="cmsis_boot/startup/startup_stm32f10x_md_vl.c" type="1"/>
+    <File name="WH160x_Driver/inc/wh160x_buffer.h" path="WH160x_Driver/inc/wh160x_buffer.h" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_driver.h" path="WH160x_Driver/inc/wh160x_driver.h" type="1"/>
@@ -88,32 +91,40 @@
     <File name="cmsis_boot" path="" type="2"/>
     <File name="WH160x_Driver/inc/wh160x_char_table.h" path="WH160x_Driver/inc/wh160x_char_table.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_pwr.h" path="stm_lib/inc/stm32f10x_pwr.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_format_string.h" path="WH160x_Driver/inc/wh160x_format_string.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_bkp.h" path="stm_lib/inc/stm32f10x_bkp.h" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dac.h" path="stm_lib/inc/stm32f10x_dac.h" type="1"/>
     <File name="WH160x_Driver/inc" path="" type="2"/>
-    <File name="WH160x_Driver/inc/wh160x_include_libraries.h" path="WH160x_Driver/inc/wh160x_include_libraries.h" type="1"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="WH160x_Driver/inc/wh160x_include_libraries.h" path="WH160x_Driver/inc/wh160x_include_libraries.h" type="1"/>
     <File name="WH160x_Driver" path="" type="2"/>
     <File name="stm_lib/src" path="" type="2"/>
     <File name="stm_lib/src/stm32f10x_dac.c" path="stm_lib/src/stm32f10x_dac.c" type="1"/>
     <File name="cmsis" path="" type="2"/>
     <File name="stm_lib" path="" type="2"/>
     <File name="WH160x_Driver/src/wh160x_driver.c" path="WH160x_Driver/src/wh160x_driver.c" type="1"/>
+    <File name="rtc.h" path="RTC/rtc.h" type="1"/>
     <File name="WH160x_Driver/src/wh160x_data_exchange.c" path="WH160x_Driver/src/wh160x_data_exchange.c" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="WH160x_Driver/src/wh160x_buffer.c" path="WH160x_Driver/src/wh160x_buffer.c" type="1"/>
+    <File name="rtc.c" path="RTC/rtc.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rtc.h" path="stm_lib/inc/stm32f10x_rtc.h" type="1"/>
     <File name="WH160x_Driver/inc/wh160x_data_exchange.h" path="WH160x_Driver/inc/wh160x_data_exchange.h" type="1"/>
-    <File name="WH160x_Driver/inc/wh160x_defines.h" path="WH160x_Driver/inc/wh160x_defines.h" type="1"/>
-    <File name="WH160x_Driver/src" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_bkp.c" path="stm_lib/src/stm32f10x_bkp.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="WH160x_Driver/src" path="" type="2"/>
+    <File name="WH160x_Driver/inc/wh160x_defines.h" path="WH160x_Driver/inc/wh160x_defines.h" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
-    <File name="WH160x_Driver/inc/wh160x_port_def.h" path="WH160x_Driver/inc/wh160x_port_def.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="WH160x_Driver/inc/wh160x_port_def.h" path="WH160x_Driver/inc/wh160x_port_def.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rtc.c" path="stm_lib/src/stm32f10x_rtc.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>
