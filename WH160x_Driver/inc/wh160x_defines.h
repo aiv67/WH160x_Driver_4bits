@@ -7,7 +7,7 @@
 
 // Тип дисплея WH1602 или WH1604, определяем количество
 // строк и столбцов для конкретной модели
-#define LCD_TYPE_WH1604
+#define LCD_TYPE_WH1602
 
 #ifdef LCD_TYPE_WH1602
 #define LCD_LINES					2
