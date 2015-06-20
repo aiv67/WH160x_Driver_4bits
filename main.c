@@ -44,6 +44,9 @@ int main(void)
 {
 	LCD_Init(LCD_CURSOR_OFF, LCD_BLINK_OFF);
 
+	RCC_ClocksTypeDef RCC_Clock;
+	uint32_t delayParam = 3000000;
+
 	Delay(1000000);
 
 	int i;
@@ -59,18 +62,21 @@ int main(void)
 	}
 */
 
-	SysTick_Config(24000);
+	RCC_GetClocksFreq(&RCC_Clock);
+	SysTick_Config(RCC_Clock.SYSCLK_Frequency / 1000);
+
 	RtcInit();
 	// –азрешение прерываний от RTC.
 	RTC->CRL |= RTC_CRL_CNF;   // разрешить конфигурирование регистров RTC
 	RTC->CRH = RTC_CRH_SECIE;  // разрешить прерывание от секундных импульсов
 	RTC->CRL &= ~RTC_CRL_CNF;  // выйти из режима конфигурировани€
 
+	GPIO_Config(GPIOC, GPIO_Pin_8, GPIO_Mode_Out_PP, GPIO_Speed_2MHz);
+	GPIO_Config(GPIOC, GPIO_Pin_9, GPIO_Mode_Out_PP, GPIO_Speed_2MHz);
+
 	NVIC_EnableIRQ (RTC_IRQn);
 
 	char digits[6] = "00000\0";
-	RCC_ClocksTypeDef RCC_Clock;
-	uint32_t delayParam = 3000000;
 
     while(1)
     {

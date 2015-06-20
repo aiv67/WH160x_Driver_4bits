@@ -24,12 +24,13 @@ unsigned char RtcInit (void)
     //выбрать источником тактовых импульсов внешний кварц 32768 и подать тактирование
     RCC->BDCR |=  RCC_BDCR_RTCEN | RCC_BDCR_RTCSEL_LSE;
 
-    //скорректировать ход часов на 1 (число тактовых импульсов RTC,
-    //которые будут проигнорированы каждые 2^20 импульсов).
-    //BKP->RTCCR |= 0&1;
-
     RTC->CRL  |=  RTC_CRL_CNF;
-    RTC->PRLL  = 0x7FFF;         //регистр деления на 32768
+    //скорректировать ход часов (число тактовых импульсов RTC,
+    //которые будут проигнорированы каждые 2^20 импульсов).
+    BKP->RTCCR &= 0xFFC0;
+    BKP->RTCCR |= 32;
+
+    RTC->PRLL  = 0x7FFE;         //регистр деления на 32768
     RTC->CRH  =  RTC_CRH_SECIE | RTC_CRH_ALRIE | RTC_CRH_OWIE;  //разрешить прерывание от секундных импульсов
     RTC->CRL  &=  ~RTC_CRL_CNF;
 
@@ -56,9 +57,9 @@ void RTC_IRQHandler(void)
      RTC->CRL &= ~RTC_CRL_SECF;    // сбросить флаг (обязательно!!!)
 
      tmp = RTC_GetCounter();       // прочитать время из RTC
-     RtcToTime(tmp, &TimeNow);         // преобразовать в "человеческий" формат
+     RtcToTime(tmp, &timeNow);         // преобразовать в "человеческий" формат
 
-     DisplayTime(&TimeNow);
+     DisplayTime(&timeNow);
   }
 
   //причина прерывания - совпадение счетного и сигнального регистра
@@ -96,31 +97,43 @@ void RtcToTime(uint32_t counter, RTC_Time *time)
 
 void SysTick_Handler(void)
 {
-	  // Проверяем состояние кнопки - порт A0
-	  if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)==1) // кнопка нажата
-	  {
-			  ButtonTime++;
+	register uint32_t tempTime;    // Переменная для корректировки времени
 
-	    if(ButtonTime == 20)
+	// Проверяем состояние кнопки - порт A0
+	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 1) // кнопка нажата
+	{
+		buttonTime++;
+
+	    if (buttonTime == 10)
 	    {
-	      TempTime = RTC_GetCounter();       // прочитать время из RTC
-	      TempTime = TempTime + 60;          // добавляем 60 секунд
-	      TempTime = TempTime / 60;          // сбрасываем секунды, для этого производим
-	      TempTime = TempTime * 60;          // целочисленное деление с последующим умножением на 60.
-	      RTC_SetCounter(TempTime);          // записываем новое значение в RTC
+	    	GPIOC->BSRR = GPIO_Pin_8;
+	    	tempTime = RTC_GetCounter();       // прочитать время из RTC
+	    	tempTime = tempTime + 60;          // добавляем 60 секунд
+	    	tempTime = tempTime / 60;          // сбрасываем секунды, для этого производим
+	    	tempTime = tempTime * 60;          // целочисленное деление с последующим умножением на 60.
+	    	RTC_SetCounter(tempTime);          // записываем новое значение в RTC
 
-	      RtcToTime(TempTime, &TimeNow);     // преобразовать в "человеческий" формат
-	      DisplayTime(&TimeNow);
+	    	RtcToTime(tempTime, &timeNow);     // преобразовать в "человеческий" формат
+	    	DisplayTime(&timeNow);
+	    	GPIOC->BRR = GPIO_Pin_8;
+	    	return;
 	    }
 
-	    if (ButtonTime == 250)
-	    	ButtonTime = 0;
-	  }
-	  else
-	  {
-		  if (ButtonTime > 0)
-		  ButtonTime--;
-	  }
+	    if (buttonTime > buttonTimeLimit)
+	    {
+	    	buttonTime = 0;
+	    	buttonTimeLimit = 100;
+			GPIOC->BSRR = GPIO_Pin_9;
+
+	    	return;
+	    }
+	}
+	else
+	{
+		buttonTime = 0;
+		buttonTimeLimit = 1000;
+		GPIOC->BRR = GPIO_Pin_9;
+	}
 }
 
 void DisplayTime(RTC_Time *time)

@@ -13,12 +13,12 @@ typedef struct
 } RTC_Time;
 
 //Структура для работы с типом "время"
-RTC_Time TimeNow;
+RTC_Time timeNow;
 
 uint32_t tmp;
 
-uint8_t ButtonTime;   // Время нажатия на кнопку
-uint32_t TempTime;    // Переменная для корректировки времени
+volatile uint16_t buttonTime;   	// Время нажатия на кнопку
+volatile uint16_t buttonTimeLimit; 	//
 
 unsigned char RtcInit (void);
 void RTC_IRQHandler(void);
